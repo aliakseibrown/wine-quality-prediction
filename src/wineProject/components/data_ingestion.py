@@ -3,7 +3,7 @@ import urllib.request as request
 import zipfile
 from src.wineProject import logger
 from src.wineProject.utils.common import get_size
-from src.wineProject.entity.config_entity import (DataIngestionConfig)
+from src.wineProject.entity.config_entity import DataIngestionConfig
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
@@ -29,4 +29,4 @@ class DataIngestion:
         os.makedirs(unzip_path, exist_ok=True)
         with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
             zip_ref.extractall(unzip_path)
-    
+            
