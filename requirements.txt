@@ -1,5 +1,6 @@
 pandas
 mlflow
+ipykernel
 notebook
 numpy
 scikit-learn
@@ -10,6 +11,7 @@ tqdm
 ensure
 joblib
 types-pyYAML
+dvc
 Flask
 Flask-Cors
 -e .
