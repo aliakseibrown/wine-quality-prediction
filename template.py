@@ -5,7 +5,7 @@ import logging
 #logging string
 logging.basicConfig(level = logging.INFO, format = '[%(asctime)s]: %(message)s:')
 
-project_name = 'wine-prediction'
+project_name = 'wineProject'
 
 list_of_files = [
     ".github/workflows/.gitkeep",
