@@ -1,6 +1,7 @@
 import os
 import urllib.request as request 
 import zipfile
+from pathlib import Path
 from src.wineProject import logger
 from src.wineProject.utils.common import get_size
 from src.wineProject.entity.config_entity import DataIngestionConfig
