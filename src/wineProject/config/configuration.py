@@ -2,7 +2,8 @@ from src.wineProject.constants import *
 from src.wineProject.utils.common import read_yaml, create_directories
 from src.wineProject.entity.config_entity import (DataIngestionConfig, 
                                                   DataValidationConfig,
-                                                  DataTransformationConfig)
+                                                  DataTransformationConfig,
+                                                  TrainingConfig)
 
 class ConfigurationManager:
     def __init__(
@@ -51,4 +52,24 @@ class ConfigurationManager:
             data_path= config.data_path
         )
         return data_transformation_config
+    
+    def get_training_config(self) -> TrainingConfig:
+        config = self.config.model_training
+        params = self.params.ElasticNet
+        schema = self.schema.TARGET_COLUMN
+
+        create_directories([Path(config.root_dir)])
+
+        training_config = TrainingConfig(
+            root_dir= config.root_dir,
+            train_data_path= config.train_data_path,
+            test_data_path= config.test_data_path,
+            model_name= config.model_name,
+            alpha= params.alpha,
+            l1_ratio= params.l1_ratio,
+            target_column= schema.name
+        )
+
+        return training_config
+
     
