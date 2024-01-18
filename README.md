@@ -1,5 +1,5 @@
 # wine-quality-prediction
-
+Model trained on a linear regression with combined L1 and L2 priors as regularizer to predict wine quality on specific features.
 
 ## Workflows
 1. Update config.yaml
@@ -10,8 +10,7 @@
 6. Update the components
 7. Update the pipeline
 8. Update the main.py
-9. Update the dvc.yaml
-10. Update the app.py
+9. Update the app.py
 
 # How to run?
  
